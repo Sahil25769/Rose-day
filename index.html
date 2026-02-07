@@ -2,119 +2,87 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sanya Proposal</title>
+<title>Sanya ❤️</title>
 
 <style>
 body{
 margin:0;
 font-family:Arial;
-background:#ffd1dc;
-overflow:hidden;
+background:#ffe4ec;
+text-align:center;
 }
 
 .page{
 display:none;
 height:100vh;
-text-align:center;
-padding-top:70px;
+padding-top:80px;
 }
 
 .active{display:block;}
 
 .box{
-background:white;
 margin:15px;
+background:white;
 padding:25px;
-border-radius:25px;
-box-shadow:0 0 25px pink;
+border-radius:20px;
+box-shadow:0 0 15px pink;
 }
-
-h1{color:#d8004f;}
-p{font-size:18px;}
 
 button{
 padding:12px 25px;
-font-size:18px;
 border:none;
-border-radius:30px;
-background:#ff0055;
+border-radius:25px;
+background:#ff3366;
 color:white;
-margin:10px;
+font-size:18px;
+margin-top:15px;
 }
 
-.rose{font-size:90px;}
+h1{color:#e6004c;}
+p{font-size:18px;}
 
-.heart{
-position:absolute;
-animation:fall 5s linear infinite;
-}
-
-@keyframes fall{
-0%{top:-10%;}
-100%{top:110%;}
-}
+.rose{font-size:80px;}
 </style>
-</head>
-
-<body>
-
-<audio autoplay loop>
-<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
-</audio>
 
 <script>
-for(let i=0;i<20;i++){
-let h=document.createElement("div");
-h.className="heart";
-h.innerHTML="💖";
-h.style.left=Math.random()*100+"%";
-h.style.animationDuration=3+Math.random()*4+"s";
-document.body.appendChild(h);
-}
-
 function show(p){
-document.querySelectorAll(".page").forEach(x=>x.classList.remove("active"));
-document.getElementById(p).classList.add("active");
+document.querySelectorAll('.page').forEach(x=>x.style.display="none");
+document.getElementById(p).style.display="block";
 }
 </script>
 
-<!-- PAGE 1 -->
-<div id="p1" class="page active">
+<body onload="show('p1')">
+
+<div id="p1" class="page">
 <div class="box">
 <h1>Hi Sanya ❤️</h1>
-<p>I made this only for you 💕</p>
+<p>I made something special for you 💕</p>
 <button onclick="show('p2')">Next ➡️</button>
 </div>
 </div>
 
-<!-- PAGE 2 -->
 <div id="p2" class="page">
 <div class="box">
 <div class="rose">🌹</div>
-<p>You are my smile, my peace, my everything 💖</p>
+<p>This rose is only for you</p>
 <button onclick="show('p3')">Next ➡️</button>
 </div>
 </div>
 
-<!-- PAGE 3 -->
 <div id="p3" class="page">
 <div class="box">
-<p>
-Every moment with you feels magical ✨<br>
-I promise to always care for you 💕
-</p>
+<p>You are my happiness 💖</p>
 <button onclick="show('p4')">Next ➡️</button>
 </div>
 </div>
 
-<!-- PAGE 4 -->
 <div id="p4" class="page">
 <div class="box">
 <h1>Sanya 🌹</h1>
-<p>Will you be my forever? 💍</p>
+<p>Will you be mine forever? 😘</p>
 
-<button onclick="alert('I Love You Sanya 💖💍')">YES</button>
-<button onclick="alert('No allowed 😜')">NO</button>
+<button onclick="alert('I Love You Sanya 💖')">YES</button><br>
+<button onclick="alert('No option nahi hai 😜')">NO</button>
 </div>
 </div>
 
