@@ -1,65 +1,97 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Happy Rose Day Sanya</title>
+<title>Rose Day For Sanya</title>
 
 <style>
 body{
-background:#ffe6ec;
+margin:0;
+background:linear-gradient(#ffb6c1,#ffe4e9);
+overflow:hidden;
+font-family:Segoe UI;
 text-align:center;
-font-family:Arial;
-padding-top:80px;
 }
 
 h1{
-color:#ff2f68;
-font-size:45px;
+margin-top:70px;
+color:#d8004f;
+font-size:50px;
 }
 
 p{
 font-size:22px;
-color:#444;
+color:#333;
+}
+
+.heart{
+position:absolute;
+color:red;
+font-size:20px;
+animation:fall 6s linear infinite;
+}
+
+@keyframes fall{
+0%{top:-10%; opacity:1;}
+100%{top:110%; opacity:0;}
 }
 
 .rose{
-font-size:80px;
-animation:float 2s infinite;
+font-size:100px;
+animation:pulse 2s infinite;
 }
 
-@keyframes float{
-0%{transform:translateY(0);}
-50%{transform:translateY(-15px);}
-100%{transform:translateY(0);}
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.2);}
+100%{transform:scale(1);}
+}
+
+.box{
+background:white;
+width:350px;
+margin:auto;
+padding:25px;
+border-radius:20px;
+box-shadow:0 0 20px pink;
 }
 
 button{
 padding:12px 25px;
 font-size:20px;
 border:none;
-border-radius:10px;
-background:#ff2f68;
+border-radius:30px;
+background:#ff0055;
 color:white;
 cursor:pointer;
-margin-top:20px;
 }
 
 button:hover{
-background:#e60045;
+background:#cc0044;
 }
 </style>
 </head>
 
 <body>
 
+<div class="heart" style="left:10%">❤️</div>
+<div class="heart" style="left:30%">💗</div>
+<div class="heart" style="left:50%">💖</div>
+<div class="heart" style="left:70%">💕</div>
+<div class="heart" style="left:90%">💘</div>
+
+<div class="box">
 <div class="rose">🌹</div>
 
-<h1>Happy Rose Day Sanya ❤️</h1>
+<h1>Sanya ❤️</h1>
 
-<p>Dear Sanya,<br>
-Ye rose sirf tumhare liye,<br>
-kyunki tum meri life ka sabse pyara hissa ho 💕</p>
+<p>
+This rose is only for you…<br>
+You are the most beautiful part of my life 💕<br><br>
+Happy Rose Day 🌹
+</p>
 
-<button onclick="alert('I Love You Sanya 🌹')">Click Me</button>
+<button onclick="alert('I Love You Sanya 🌹💖')">Touch My Heart</button>
+</div>
 
 </body>
 </html>
