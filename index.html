@@ -1,75 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Rose Day For Sanya</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanya Proposal</title>
 
 <style>
 body{
 margin:0;
-background:linear-gradient(#ff9aa2,#ffd1dc);
+font-family:Arial;
+background:#ffd1dc;
 overflow:hidden;
-font-family:Segoe UI;
-text-align:center;
 }
+
+.page{
+display:none;
+height:100vh;
+text-align:center;
+padding-top:70px;
+}
+
+.active{display:block;}
+
+.box{
+background:white;
+margin:15px;
+padding:25px;
+border-radius:25px;
+box-shadow:0 0 25px pink;
+}
+
+h1{color:#d8004f;}
+p{font-size:18px;}
+
+button{
+padding:12px 25px;
+font-size:18px;
+border:none;
+border-radius:30px;
+background:#ff0055;
+color:white;
+margin:10px;
+}
+
+.rose{font-size:90px;}
 
 .heart{
 position:absolute;
-font-size:22px;
-animation:fall 6s linear infinite;
+animation:fall 5s linear infinite;
 }
 
 @keyframes fall{
 0%{top:-10%;}
 100%{top:110%;}
-}
-
-.box{
-margin-top:80px;
-background:white;
-width:360px;
-padding:25px;
-border-radius:25px;
-box-shadow:0 0 30px pink;
-margin-left:auto;
-margin-right:auto;
-}
-
-.rose{
-font-size:100px;
-animation:pulse 2s infinite;
-}
-
-@keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.2);}
-100%{transform:scale(1);}
-}
-
-h1{
-color:#d8004f;
-}
-
-p{
-font-size:20px;
-}
-
-button{
-padding:10px 25px;
-font-size:18px;
-border:none;
-border-radius:25px;
-margin:10px;
-cursor:pointer;
-}
-
-#yes{
-background:#ff0055;
-color:white;
-}
-
-#no{
-background:#999;
-color:white;
 }
 </style>
 </head>
@@ -83,29 +65,57 @@ color:white;
 <script>
 for(let i=0;i<20;i++){
 let h=document.createElement("div");
-h.innerHTML="💖";
 h.className="heart";
+h.innerHTML="💖";
 h.style.left=Math.random()*100+"%";
 h.style.animationDuration=3+Math.random()*4+"s";
 document.body.appendChild(h);
 }
+
+function show(p){
+document.querySelectorAll(".page").forEach(x=>x.classList.remove("active"));
+document.getElementById(p).classList.add("active");
+}
 </script>
 
+<!-- PAGE 1 -->
+<div id="p1" class="page active">
 <div class="box">
+<h1>Hi Sanya ❤️</h1>
+<p>I made this only for you 💕</p>
+<button onclick="show('p2')">Next ➡️</button>
+</div>
+</div>
 
+<!-- PAGE 2 -->
+<div id="p2" class="page">
+<div class="box">
 <div class="rose">🌹</div>
+<p>You are my smile, my peace, my everything 💖</p>
+<button onclick="show('p3')">Next ➡️</button>
+</div>
+</div>
 
-<h1>Sanya ❤️</h1>
-
+<!-- PAGE 3 -->
+<div id="p3" class="page">
+<div class="box">
 <p>
-This rose is only for you 🌹<br>
-You make my world beautiful 💕<br><br>
-Will you be mine forever? 😘
+Every moment with you feels magical ✨<br>
+I promise to always care for you 💕
 </p>
+<button onclick="show('p4')">Next ➡️</button>
+</div>
+</div>
 
-<button id="yes" onclick="alert('I Love You Sanya 💖🌹')">YES</button>
-<button id="no" onclick="alert('No option not allowed 😜')">NO</button>
+<!-- PAGE 4 -->
+<div id="p4" class="page">
+<div class="box">
+<h1>Sanya 🌹</h1>
+<p>Will you be my forever? 💍</p>
 
+<button onclick="alert('I Love You Sanya 💖💍')">YES</button>
+<button onclick="alert('No allowed 😜')">NO</button>
+</div>
 </div>
 
 </body>
